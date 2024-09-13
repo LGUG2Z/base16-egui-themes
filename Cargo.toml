@@ -1,0 +1,9 @@
+[package]
+name = "base16-egui-themes"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+egui = "0.28"
+serde = "1"
+schemars = "0.8"
