@@ -21,115 +21,103 @@ pub const BASE_0D: Color32 = Color32::from_rgb(131, 118, 156);
 pub const BASE_0E: Color32 = Color32::from_rgb(255, 119, 168);
 pub const BASE_0F: Color32 = Color32::from_rgb(255, 204, 170);
 
-const SHADOW: Color32 = Color32::from_rgba_premultiplied(0, 0, 0, 96);
-const TRANSPARENT: Color32 = Color32::from_rgba_premultiplied(0, 0, 0, 0);
-const EXTREME_BACKGROUND: Color32 = BASE_00;
-const MAIN_BACKGROUND: Color32 = BASE_01;
-const MAIN_FOREGROUND: Color32 = BASE_02;
-const CODE_BACKGROUND: Color32 = BASE_02;
-const HOVERED_FILL: Color32 = BASE_02;
-const HOVER_BACKGROUND: Color32 = BASE_03;
-const UNUSABLE: Color32 = BASE_05;
-const INACTIVE_STROKE: Color32 = BASE_05;
-const OPEN_FILL: Color32 = BASE_06;
-const HOVER: Color32 = BASE_06;
-const HYPERLINK: Color32 = BASE_08;
-const ERROR_FOREGROUND: Color32 = BASE_0B;
-const WARNING_FOREGROUND: Color32 = BASE_0C;
+pub const SHADOW: Color32 = Color32::from_rgba_premultiplied(0, 0, 0, 96);
+pub const TRANSPARENT: Color32 = Color32::from_rgba_premultiplied(0, 0, 0, 0);
+pub const BACKGROUND: Color32 = BASE_01;
 
 pub fn style_from(original: Style) -> Style {
     Style {
         visuals: Visuals {
             widgets: Widgets {
                 noninteractive: WidgetVisuals {
-                    bg_fill: MAIN_BACKGROUND,
-                    weak_bg_fill: MAIN_BACKGROUND,
+                    bg_fill: BASE_01,
+                    weak_bg_fill: BASE_01,
                     bg_stroke: Stroke {
-                        color: MAIN_FOREGROUND,
+                        color: BASE_02,
                         ..original.visuals.widgets.noninteractive.bg_stroke
                     },
                     fg_stroke: Stroke {
-                        color: UNUSABLE,
+                        color: BASE_05,
                         ..original.visuals.widgets.noninteractive.fg_stroke
                     },
                     ..original.visuals.widgets.noninteractive
                 },
                 inactive: WidgetVisuals {
-                    bg_fill: MAIN_FOREGROUND,
-                    weak_bg_fill: MAIN_FOREGROUND,
+                    bg_fill: BASE_02,
+                    weak_bg_fill: BASE_02,
                     bg_stroke: Stroke {
                         color: TRANSPARENT,
                         ..original.visuals.widgets.inactive.bg_stroke
                     },
                     fg_stroke: Stroke {
-                        color: INACTIVE_STROKE,
+                        color: BASE_05,
                         ..original.visuals.widgets.inactive.fg_stroke
                     },
                     ..original.visuals.widgets.inactive
                 },
                 hovered: WidgetVisuals {
-                    bg_fill: HOVERED_FILL,
-                    weak_bg_fill: HOVERED_FILL,
+                    bg_fill: BASE_02,
+                    weak_bg_fill: BASE_02,
                     bg_stroke: Stroke {
-                        color: HOVER_BACKGROUND,
+                        color: BASE_03,
                         ..original.visuals.widgets.hovered.bg_stroke
                     },
                     fg_stroke: Stroke {
-                        color: HOVER,
+                        color: BASE_06,
                         ..original.visuals.widgets.hovered.fg_stroke
                     },
                     ..original.visuals.widgets.hovered
                 },
                 active: WidgetVisuals {
-                    bg_fill: HOVERED_FILL,
-                    weak_bg_fill: HOVERED_FILL,
+                    bg_fill: BASE_02,
+                    weak_bg_fill: BASE_02,
                     bg_stroke: Stroke {
-                        color: HOVER_BACKGROUND,
+                        color: BASE_03,
                         ..original.visuals.widgets.hovered.bg_stroke
                     },
                     fg_stroke: Stroke {
-                        color: HOVER,
+                        color: BASE_06,
                         ..original.visuals.widgets.hovered.fg_stroke
                     },
                     ..original.visuals.widgets.active
                 },
                 open: WidgetVisuals {
-                    bg_fill: MAIN_BACKGROUND,
-                    weak_bg_fill: MAIN_BACKGROUND,
+                    bg_fill: BASE_01,
+                    weak_bg_fill: BASE_01,
                     bg_stroke: Stroke {
-                        color: MAIN_FOREGROUND,
+                        color: BASE_02,
                         ..original.visuals.widgets.open.bg_stroke
                     },
                     fg_stroke: Stroke {
-                        color: OPEN_FILL,
+                        color: BASE_06,
                         ..original.visuals.widgets.open.fg_stroke
                     },
                     ..original.visuals.widgets.open
                 },
             },
             selection: Selection {
-                bg_fill: HOVERED_FILL,
+                bg_fill: BASE_02,
                 stroke: Stroke {
-                    color: HOVER,
+                    color: BASE_06,
                     ..original.visuals.selection.stroke
                 },
             },
-            hyperlink_color: HYPERLINK,
+            hyperlink_color: BASE_08,
             faint_bg_color: TRANSPARENT,
-            extreme_bg_color: EXTREME_BACKGROUND,
-            code_bg_color: CODE_BACKGROUND,
-            warn_fg_color: WARNING_FOREGROUND,
-            error_fg_color: ERROR_FOREGROUND,
+            extreme_bg_color: BASE_00,
+            code_bg_color: BASE_02,
+            warn_fg_color: BASE_0C,
+            error_fg_color: BASE_0B,
             window_shadow: Shadow {
                 color: SHADOW,
                 ..original.visuals.window_shadow
             },
-            window_fill: MAIN_BACKGROUND,
+            window_fill: BASE_01,
             window_stroke: Stroke {
-                color: MAIN_FOREGROUND,
+                color: BASE_02,
                 ..original.visuals.window_stroke
             },
-            panel_fill: MAIN_BACKGROUND,
+            panel_fill: BASE_01,
             popup_shadow: Shadow {
                 color: SHADOW,
                 ..original.visuals.popup_shadow
@@ -139,6 +127,7 @@ pub fn style_from(original: Style) -> Style {
         ..original
     }
 }
-pub fn default_style() -> Style {
+
+pub fn style() -> Style {
     style_from(Default::default())
 }
