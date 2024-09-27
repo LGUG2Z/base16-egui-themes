@@ -4,6 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-egui = "0.28"
+egui = "0.29"
 serde = "1"
 schemars = "0.8"
