@@ -1,4 +1,5 @@
 use egui::{Color32, Style};
+use strum::IntoEnumIterator;
 
 pub mod base16_3024;
 pub mod base16_apathy;
@@ -270,7 +271,17 @@ pub mod base16_xcode_dusk;
 pub mod base16_zenbones;
 pub mod base16_zenburn;
 
-#[derive(Copy, Clone, Debug, serde::Serialize, serde::Deserialize, schemars::JsonSchema)]
+#[derive(
+    Copy,
+    Clone,
+    Debug,
+    serde::Serialize,
+    serde::Deserialize,
+    schemars::JsonSchema,
+    strum_macros::EnumIter,
+    strum_macros::AsRefStr,
+    strum_macros::EnumString,
+)]
 pub enum Base16 {
     #[serde(rename = "3024")]
     _3024,
