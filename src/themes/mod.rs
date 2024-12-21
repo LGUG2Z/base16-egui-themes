@@ -275,6 +275,7 @@ pub mod base16_zenburn;
     Copy,
     Clone,
     Debug,
+    PartialEq,
     serde::Serialize,
     serde::Deserialize,
     schemars::JsonSchema,
