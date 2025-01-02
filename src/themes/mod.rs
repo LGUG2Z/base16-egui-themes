@@ -1,5 +1,4 @@
 use egui::{Color32, Style};
-use strum::IntoEnumIterator;
 
 pub mod base16_3024;
 pub mod base16_apathy;
@@ -282,6 +281,7 @@ pub mod base16_zenburn;
     strum_macros::EnumIter,
     strum_macros::AsRefStr,
     strum_macros::EnumString,
+    strum_macros::Display,
 )]
 pub enum Base16 {
     #[serde(rename = "3024")]
