@@ -283,276 +283,546 @@ pub mod base16_zenburn;
     strum_macros::EnumString,
     strum_macros::Display,
 )]
+/// Base 16 colour palette
 pub enum Base16 {
+    /// 3024 (https://tinted-theming.github.io/tinted-gallery/#base16-3024)
     #[serde(rename = "3024")]
     _3024,
+    /// Apathy (https://tinted-theming.github.io/tinted-gallery/#base16-apathy)
     Apathy,
+    /// Apprentice (https://tinted-theming.github.io/tinted-gallery/#base16-apprentice)
     Apprentice,
+    /// Ashes (https://tinted-theming.github.io/tinted-gallery/#base16-ashes)
     Ashes,
+    /// Atelier Cave Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-cave-light)
     AtelierCaveLight,
+    /// Atelier Cave (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-cave)
     AtelierCave,
+    /// Atelier Dune Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-dune-light)
     AtelierDuneLight,
+    /// Atelier Dune (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-dune)
     AtelierDune,
+    /// Atelier Estuary Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-estuary-light)
     AtelierEstuaryLight,
+    /// Atelier Estuary (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-estuary)
     AtelierEstuary,
+    /// Atelier Forest Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-forest-light)
     AtelierForestLight,
+    /// Atelier Forest (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-forest)
     AtelierForest,
+    /// Atelier Heath Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-heath-light)
     AtelierHeathLight,
+    /// Atelier Heath (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-heath)
     AtelierHeath,
+    /// Atelier Lakeside Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-lakeside-light)
     AtelierLakesideLight,
+    /// Atelier Lakeside (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-lakeside)
     AtelierLakeside,
+    /// Atelier Plateau Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-plateau-light)
     AtelierPlateauLight,
+    /// Atelier Plateau (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-plateau)
     AtelierPlateau,
+    /// Atelier Savanna Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-savanna-light)
     AtelierSavannaLight,
+    /// Atelier Savanna (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-savanna)
     AtelierSavanna,
+    /// Atelier Seaside Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-seaside-light)
     AtelierSeasideLight,
+    /// Atelier Seaside (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-seaside)
     AtelierSeaside,
+    /// Atelier Sulphurpool Light (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-sulphurpool-light)
     AtelierSulphurpoolLight,
+    /// Atelier Sulphurpool (https://tinted-theming.github.io/tinted-gallery/#base16-atelier-sulphurpool)
     AtelierSulphurpool,
+    /// Atlas (https://tinted-theming.github.io/tinted-gallery/#base16-atlas)
     Atlas,
+    /// Ayu Dark (https://tinted-theming.github.io/tinted-gallery/#base16-ayu-dark)
     AyuDark,
+    /// Ayu Light (https://tinted-theming.github.io/tinted-gallery/#base16-ayu-light)
     AyuLight,
+    /// Ayu Mirage (https://tinted-theming.github.io/tinted-gallery/#base16-ayu-mirage)
     AyuMirage,
+    /// Aztec (https://tinted-theming.github.io/tinted-gallery/#base16-aztec)
     Aztec,
+    /// Bespin (https://tinted-theming.github.io/tinted-gallery/#base16-bespin)
     Bespin,
+    /// Black Metal Bathory (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-bathory)
     BlackMetalBathory,
+    /// Black Metal Burzum (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-burzum)
     BlackMetalBurzum,
+    /// Black Metal Dark Funeral (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-dark-funeral)
     BlackMetalDarkFuneral,
+    /// Black Metal Gorgoroth (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-gorgoroth)
     BlackMetalGorgoroth,
+    /// Black Metal Immortal (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-immortal)
     BlackMetalImmortal,
+    /// Black Metal Khold (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-khold)
     BlackMetalKhold,
+    /// Black Metal Marduk (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-marduk)
     BlackMetalMarduk,
+    /// Black Metal Mayhem (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-mayhem)
     BlackMetalMayhem,
+    /// Black Metal Nile (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-nile)
     BlackMetalNile,
+    /// Black Metal Venom (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal-venom)
     BlackMetalVenom,
+    /// Black Metal (https://tinted-theming.github.io/tinted-gallery/#base16-black-metal)
     BlackMetal,
+    /// Blueforest (https://tinted-theming.github.io/tinted-gallery/#base16-blueforest)
     Blueforest,
+    /// Blueish (https://tinted-theming.github.io/tinted-gallery/#base16-blueish)
     Blueish,
+    /// Brewer (https://tinted-theming.github.io/tinted-gallery/#base16-brewer)
     Brewer,
+    /// Bright (https://tinted-theming.github.io/tinted-gallery/#base16-bright)
     Bright,
+    /// Brogrammer (https://tinted-theming.github.io/tinted-gallery/#base16-brogrammer)
     Brogrammer,
+    /// Brushtrees Dark (https://tinted-theming.github.io/tinted-gallery/#base16-brushtrees-dark)
     BrushtreesDark,
+    /// Brushtrees (https://tinted-theming.github.io/tinted-gallery/#base16-brushtrees)
     Brushtrees,
+    /// Caroline (https://tinted-theming.github.io/tinted-gallery/#base16-caroline)
     Caroline,
+    /// Catppuccin Frappe (https://tinted-theming.github.io/tinted-gallery/#base16-catppuccin-frappe)
     CatppuccinFrappe,
+    /// Catppuccin Latte (https://tinted-theming.github.io/tinted-gallery/#base16-catppuccin-latte)
     CatppuccinLatte,
+    /// Catppuccin Macchiato (https://tinted-theming.github.io/tinted-gallery/#base16-catppuccin-macchiato)
     CatppuccinMacchiato,
+    /// Catppuccin Mocha (https://tinted-theming.github.io/tinted-gallery/#base16-catppuccin-mocha)
     CatppuccinMocha,
+    /// Chalk (https://tinted-theming.github.io/tinted-gallery/#base16-chalk)
     Chalk,
+    /// Circus (https://tinted-theming.github.io/tinted-gallery/#base16-circus)
     Circus,
+    /// Classic Dark (https://tinted-theming.github.io/tinted-gallery/#base16-classic-dark)
     ClassicDark,
+    /// Classic Light (https://tinted-theming.github.io/tinted-gallery/#base16-classic-light)
     ClassicLight,
+    /// Codeschool (https://tinted-theming.github.io/tinted-gallery/#base16-codeschool)
     Codeschool,
+    /// Colors (https://tinted-theming.github.io/tinted-gallery/#base16-colors)
     Colors,
+    /// Cupcake (https://tinted-theming.github.io/tinted-gallery/#base16-cupcake)
     Cupcake,
+    /// Cupertino (https://tinted-theming.github.io/tinted-gallery/#base16-cupertino)
     Cupertino,
+    /// Da One Black (https://tinted-theming.github.io/tinted-gallery/#base16-da-one-black)
     DaOneBlack,
+    /// Da One Gray (https://tinted-theming.github.io/tinted-gallery/#base16-da-one-gray)
     DaOneGray,
+    /// Da One Ocean (https://tinted-theming.github.io/tinted-gallery/#base16-da-one-ocean)
     DaOneOcean,
+    /// Da One Paper (https://tinted-theming.github.io/tinted-gallery/#base16-da-one-paper)
     DaOnePaper,
+    /// Da One Sea (https://tinted-theming.github.io/tinted-gallery/#base16-da-one-sea)
     DaOneSea,
+    /// Da One White (https://tinted-theming.github.io/tinted-gallery/#base16-da-one-white)
     DaOneWhite,
+    /// Danqing Light (https://tinted-theming.github.io/tinted-gallery/#base16-danqing-light)
     DanqingLight,
+    /// Danqing (https://tinted-theming.github.io/tinted-gallery/#base16-danqing)
     Danqing,
+    /// Darcula (https://tinted-theming.github.io/tinted-gallery/#base16-darcula)
     Darcula,
+    /// Darkmoss (https://tinted-theming.github.io/tinted-gallery/#base16-darkmoss)
     Darkmoss,
+    /// Darktooth (https://tinted-theming.github.io/tinted-gallery/#base16-darktooth)
     Darktooth,
+    /// Darkviolet (https://tinted-theming.github.io/tinted-gallery/#base16-darkviolet)
     Darkviolet,
+    /// Decaf (https://tinted-theming.github.io/tinted-gallery/#base16-decaf)
     Decaf,
+    /// Default Dark (https://tinted-theming.github.io/tinted-gallery/#base16-default-dark)
     DefaultDark,
+    /// Default Light (https://tinted-theming.github.io/tinted-gallery/#base16-default-light)
     DefaultLight,
+    /// Dirtysea (https://tinted-theming.github.io/tinted-gallery/#base16-dirtysea)
     Dirtysea,
+    /// Dracula (https://tinted-theming.github.io/tinted-gallery/#base16-dracula)
     Dracula,
+    /// Edge Dark (https://tinted-theming.github.io/tinted-gallery/#base16-edge-dark)
     EdgeDark,
+    /// Edge Light (https://tinted-theming.github.io/tinted-gallery/#base16-edge-light)
     EdgeLight,
+    /// Eighties (https://tinted-theming.github.io/tinted-gallery/#base16-eighties)
     Eighties,
+    /// Embers Light (https://tinted-theming.github.io/tinted-gallery/#base16-embers-light)
     EmbersLight,
+    /// Embers (https://tinted-theming.github.io/tinted-gallery/#base16-embers)
     Embers,
+    /// Emil (https://tinted-theming.github.io/tinted-gallery/#base16-emil)
     Emil,
+    /// Equilibrium Dark (https://tinted-theming.github.io/tinted-gallery/#base16-equilibrium-dark)
     EquilibriumDark,
+    /// Equilibrium Gray Dark (https://tinted-theming.github.io/tinted-gallery/#base16-equilibrium-gray-dark)
     EquilibriumGrayDark,
+    /// Equilibrium Gray Light (https://tinted-theming.github.io/tinted-gallery/#base16-equilibrium-gray-light)
     EquilibriumGrayLight,
+    /// Equilibrium Light (https://tinted-theming.github.io/tinted-gallery/#base16-equilibrium-light)
     EquilibriumLight,
+    /// Eris (https://tinted-theming.github.io/tinted-gallery/#base16-eris)
     Eris,
+    /// Espresso (https://tinted-theming.github.io/tinted-gallery/#base16-espresso)
     Espresso,
+    /// Eva Dim (https://tinted-theming.github.io/tinted-gallery/#base16-eva-dim)
     EvaDim,
+    /// Eva (https://tinted-theming.github.io/tinted-gallery/#base16-eva)
     Eva,
+    /// Evenok Dark (https://tinted-theming.github.io/tinted-gallery/#base16-evenok-dark)
     EvenokDark,
+    /// Everforest Dark Hard (https://tinted-theming.github.io/tinted-gallery/#base16-everforest-dark-hard)
     EverforestDarkHard,
+    /// Everforest (https://tinted-theming.github.io/tinted-gallery/#base16-everforest)
     Everforest,
+    /// Flat (https://tinted-theming.github.io/tinted-gallery/#base16-flat)
     Flat,
+    /// Framer (https://tinted-theming.github.io/tinted-gallery/#base16-framer)
     Framer,
+    /// Fruit Soda (https://tinted-theming.github.io/tinted-gallery/#base16-fruit-soda)
     FruitSoda,
+    /// Gigavolt (https://tinted-theming.github.io/tinted-gallery/#base16-gigavolt)
     Gigavolt,
+    /// Github (https://tinted-theming.github.io/tinted-gallery/#base16-github)
     Github,
+    /// Google Dark (https://tinted-theming.github.io/tinted-gallery/#base16-google-dark)
     GoogleDark,
+    /// Google Light (https://tinted-theming.github.io/tinted-gallery/#base16-google-light)
     GoogleLight,
+    /// Gotham (https://tinted-theming.github.io/tinted-gallery/#base16-gotham)
     Gotham,
+    /// Grayscale Dark (https://tinted-theming.github.io/tinted-gallery/#base16-grayscale-dark)
     GrayscaleDark,
+    /// Grayscale Light (https://tinted-theming.github.io/tinted-gallery/#base16-grayscale-light)
     GrayscaleLight,
+    /// Greenscreen (https://tinted-theming.github.io/tinted-gallery/#base16-greenscreen)
     Greenscreen,
+    /// Gruber (https://tinted-theming.github.io/tinted-gallery/#base16-gruber)
     Gruber,
+    /// Gruvbox Dark Hard (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-dark-hard)
     GruvboxDarkHard,
+    /// Gruvbox Dark Medium (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-dark-medium)
     GruvboxDarkMedium,
+    /// Gruvbox Dark Pale (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-dark-pale)
     GruvboxDarkPale,
+    /// Gruvbox Dark Soft (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-dark-soft)
     GruvboxDarkSoft,
+    /// Gruvbox Light Hard (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-light-hard)
     GruvboxLightHard,
+    /// Gruvbox Light Medium (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-light-medium)
     GruvboxLightMedium,
+    /// Gruvbox Light Soft (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-light-soft)
     GruvboxLightSoft,
+    /// Gruvbox Material Dark Hard (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-material-dark-hard)
     GruvboxMaterialDarkHard,
+    /// Gruvbox Material Dark Medium (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-material-dark-medium)
     GruvboxMaterialDarkMedium,
+    /// Gruvbox Material Dark Soft (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-material-dark-soft)
     GruvboxMaterialDarkSoft,
+    /// Gruvbox Material Light Hard (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-material-light-hard)
     GruvboxMaterialLightHard,
+    /// Gruvbox Material Light Medium (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-material-light-medium)
     GruvboxMaterialLightMedium,
+    /// Gruvbox Material Light Soft (https://tinted-theming.github.io/tinted-gallery/#base16-gruvbox-material-light-soft)
     GruvboxMaterialLightSoft,
+    /// Hardcore (https://tinted-theming.github.io/tinted-gallery/#base16-hardcore)
     Hardcore,
+    /// Harmonic16 Dark (https://tinted-theming.github.io/tinted-gallery/#base16-harmonic16-dark)
     Harmonic16Dark,
+    /// Harmonic16 Light (https://tinted-theming.github.io/tinted-gallery/#base16-harmonic16-light)
     Harmonic16Light,
+    /// Heetch Light (https://tinted-theming.github.io/tinted-gallery/#base16-heetch-light)
     HeetchLight,
+    /// Heetch (https://tinted-theming.github.io/tinted-gallery/#base16-heetch)
     Heetch,
+    /// Helios (https://tinted-theming.github.io/tinted-gallery/#base16-helios)
     Helios,
+    /// Hopscotch (https://tinted-theming.github.io/tinted-gallery/#base16-hopscotch)
     Hopscotch,
+    /// Horizon Dark (https://tinted-theming.github.io/tinted-gallery/#base16-horizon-dark)
     HorizonDark,
+    /// Horizon Light (https://tinted-theming.github.io/tinted-gallery/#base16-horizon-light)
     HorizonLight,
+    /// Horizon Terminal Dark (https://tinted-theming.github.io/tinted-gallery/#base16-horizon-terminal-dark)
     HorizonTerminalDark,
+    /// Horizon Terminal Light (https://tinted-theming.github.io/tinted-gallery/#base16-horizon-terminal-light)
     HorizonTerminalLight,
+    /// Humanoid Dark (https://tinted-theming.github.io/tinted-gallery/#base16-humanoid-dark)
     HumanoidDark,
+    /// Humanoid Light (https://tinted-theming.github.io/tinted-gallery/#base16-humanoid-light)
     HumanoidLight,
+    /// Ia Dark (https://tinted-theming.github.io/tinted-gallery/#base16-ia-dark)
     IaDark,
+    /// Ia Light (https://tinted-theming.github.io/tinted-gallery/#base16-ia-light)
     IaLight,
+    /// Icy (https://tinted-theming.github.io/tinted-gallery/#base16-icy)
     Icy,
+    /// Irblack (https://tinted-theming.github.io/tinted-gallery/#base16-irblack)
     Irblack,
+    /// Isotope (https://tinted-theming.github.io/tinted-gallery/#base16-isotope)
     Isotope,
+    /// Jabuti (https://tinted-theming.github.io/tinted-gallery/#base16-jabuti)
     Jabuti,
+    /// Kanagawa (https://tinted-theming.github.io/tinted-gallery/#base16-kanagawa)
     Kanagawa,
+    /// Katy (https://tinted-theming.github.io/tinted-gallery/#base16-katy)
     Katy,
+    /// Kimber (https://tinted-theming.github.io/tinted-gallery/#base16-kimber)
     Kimber,
+    /// Lime (https://tinted-theming.github.io/tinted-gallery/#base16-lime)
     Lime,
+    /// Macintosh (https://tinted-theming.github.io/tinted-gallery/#base16-macintosh)
     Macintosh,
+    /// Marrakesh (https://tinted-theming.github.io/tinted-gallery/#base16-marrakesh)
     Marrakesh,
+    /// Materia (https://tinted-theming.github.io/tinted-gallery/#base16-materia)
     Materia,
+    /// Material Darker (https://tinted-theming.github.io/tinted-gallery/#base16-material-darker)
     MaterialDarker,
+    /// Material Lighter (https://tinted-theming.github.io/tinted-gallery/#base16-material-lighter)
     MaterialLighter,
+    /// Material Palenight (https://tinted-theming.github.io/tinted-gallery/#base16-material-palenight)
     MaterialPalenight,
+    /// Material Vivid (https://tinted-theming.github.io/tinted-gallery/#base16-material-vivid)
     MaterialVivid,
+    /// Material (https://tinted-theming.github.io/tinted-gallery/#base16-material)
     Material,
+    /// Measured Dark (https://tinted-theming.github.io/tinted-gallery/#base16-measured-dark)
     MeasuredDark,
+    /// Measured Light (https://tinted-theming.github.io/tinted-gallery/#base16-measured-light)
     MeasuredLight,
+    /// Mellow Purple (https://tinted-theming.github.io/tinted-gallery/#base16-mellow-purple)
     MellowPurple,
+    /// Mexico Light (https://tinted-theming.github.io/tinted-gallery/#base16-mexico-light)
     MexicoLight,
+    /// Mocha (https://tinted-theming.github.io/tinted-gallery/#base16-mocha)
     Mocha,
+    /// Monokai (https://tinted-theming.github.io/tinted-gallery/#base16-monokai)
     Monokai,
+    /// Moonlight (https://tinted-theming.github.io/tinted-gallery/#base16-moonlight)
     Moonlight,
+    /// Mountain (https://tinted-theming.github.io/tinted-gallery/#base16-mountain)
     Mountain,
+    /// Nebula (https://tinted-theming.github.io/tinted-gallery/#base16-nebula)
     Nebula,
+    /// Nord Light (https://tinted-theming.github.io/tinted-gallery/#base16-nord-light)
     NordLight,
+    /// Nord (https://tinted-theming.github.io/tinted-gallery/#base16-nord)
     Nord,
+    /// Nova (https://tinted-theming.github.io/tinted-gallery/#base16-nova)
     Nova,
+    /// Ocean (https://tinted-theming.github.io/tinted-gallery/#base16-ocean)
     Ocean,
+    /// Oceanicnext (https://tinted-theming.github.io/tinted-gallery/#base16-oceanicnext)
     Oceanicnext,
+    /// One Light (https://tinted-theming.github.io/tinted-gallery/#base16-one-light)
     OneLight,
+    /// Onedark Dark (https://tinted-theming.github.io/tinted-gallery/#base16-onedark-dark)
     OnedarkDark,
+    /// Onedark (https://tinted-theming.github.io/tinted-gallery/#base16-onedark)
     Onedark,
+    /// Outrun Dark (https://tinted-theming.github.io/tinted-gallery/#base16-outrun-dark)
     OutrunDark,
+    /// Oxocarbon Dark (https://tinted-theming.github.io/tinted-gallery/#base16-oxocarbon-dark)
     OxocarbonDark,
+    /// Oxocarbon Light (https://tinted-theming.github.io/tinted-gallery/#base16-oxocarbon-light)
     OxocarbonLight,
+    /// Pandora (https://tinted-theming.github.io/tinted-gallery/#base16-pandora)
     Pandora,
+    /// Papercolor Dark (https://tinted-theming.github.io/tinted-gallery/#base16-papercolor-dark)
     PapercolorDark,
+    /// Papercolor Light (https://tinted-theming.github.io/tinted-gallery/#base16-papercolor-light)
     PapercolorLight,
+    /// Paraiso (https://tinted-theming.github.io/tinted-gallery/#base16-paraiso)
     Paraiso,
+    /// Pasque (https://tinted-theming.github.io/tinted-gallery/#base16-pasque)
     Pasque,
+    /// Phd (https://tinted-theming.github.io/tinted-gallery/#base16-phd)
     Phd,
+    /// Pico (https://tinted-theming.github.io/tinted-gallery/#base16-pico)
     Pico,
+    /// Pinky (https://tinted-theming.github.io/tinted-gallery/#base16-pinky)
     Pinky,
+    /// Pop (https://tinted-theming.github.io/tinted-gallery/#base16-pop)
     Pop,
+    /// Porple (https://tinted-theming.github.io/tinted-gallery/#base16-porple)
     Porple,
+    /// Precious Dark Eleven (https://tinted-theming.github.io/tinted-gallery/#base16-precious-dark-eleven)
     PreciousDarkEleven,
+    /// Precious Dark Fifteen (https://tinted-theming.github.io/tinted-gallery/#base16-precious-dark-fifteen)
     PreciousDarkFifteen,
+    /// Precious Light Warm (https://tinted-theming.github.io/tinted-gallery/#base16-precious-light-warm)
     PreciousLightWarm,
+    /// Precious Light White (https://tinted-theming.github.io/tinted-gallery/#base16-precious-light-white)
     PreciousLightWhite,
+    /// Primer Dark Dimmed (https://tinted-theming.github.io/tinted-gallery/#base16-primer-dark-dimmed)
     PrimerDarkDimmed,
+    /// Primer Dark (https://tinted-theming.github.io/tinted-gallery/#base16-primer-dark)
     PrimerDark,
+    /// Primer Light (https://tinted-theming.github.io/tinted-gallery/#base16-primer-light)
     PrimerLight,
+    /// Purpledream (https://tinted-theming.github.io/tinted-gallery/#base16-purpledream)
     Purpledream,
+    /// Qualia (https://tinted-theming.github.io/tinted-gallery/#base16-qualia)
     Qualia,
+    /// Railscasts (https://tinted-theming.github.io/tinted-gallery/#base16-railscasts)
     Railscasts,
+    /// Rebecca (https://tinted-theming.github.io/tinted-gallery/#base16-rebecca)
     Rebecca,
+    /// Rose Pine Dawn (https://tinted-theming.github.io/tinted-gallery/#base16-rose-pine-dawn)
     RosePineDawn,
+    /// Rose Pine Moon (https://tinted-theming.github.io/tinted-gallery/#base16-rose-pine-moon)
     RosePineMoon,
+    /// Rose Pine (https://tinted-theming.github.io/tinted-gallery/#base16-rose-pine)
     RosePine,
+    /// Saga (https://tinted-theming.github.io/tinted-gallery/#base16-saga)
     Saga,
+    /// Sagelight (https://tinted-theming.github.io/tinted-gallery/#base16-sagelight)
     Sagelight,
+    /// Sakura (https://tinted-theming.github.io/tinted-gallery/#base16-sakura)
     Sakura,
+    /// Sandcastle (https://tinted-theming.github.io/tinted-gallery/#base16-sandcastle)
     Sandcastle,
+    /// Selenized Black (https://tinted-theming.github.io/tinted-gallery/#base16-selenized-black)
     SelenizedBlack,
+    /// Selenized Dark (https://tinted-theming.github.io/tinted-gallery/#base16-selenized-dark)
     SelenizedDark,
+    /// Selenized Light (https://tinted-theming.github.io/tinted-gallery/#base16-selenized-light)
     SelenizedLight,
+    /// Selenized White (https://tinted-theming.github.io/tinted-gallery/#base16-selenized-white)
     SelenizedWhite,
+    /// Seti (https://tinted-theming.github.io/tinted-gallery/#base16-seti)
     Seti,
+    /// Shades Of Purple (https://tinted-theming.github.io/tinted-gallery/#base16-shades-of-purple)
     ShadesOfPurple,
+    /// Shadesmear Dark (https://tinted-theming.github.io/tinted-gallery/#base16-shadesmear-dark)
     ShadesmearDark,
+    /// Shadesmear Light (https://tinted-theming.github.io/tinted-gallery/#base16-shadesmear-light)
     ShadesmearLight,
+    /// Shapeshifter (https://tinted-theming.github.io/tinted-gallery/#base16-shapeshifter)
     Shapeshifter,
+    /// Silk Dark (https://tinted-theming.github.io/tinted-gallery/#base16-silk-dark)
     SilkDark,
+    /// Silk Light (https://tinted-theming.github.io/tinted-gallery/#base16-silk-light)
     SilkLight,
+    /// Snazzy (https://tinted-theming.github.io/tinted-gallery/#base16-snazzy)
     Snazzy,
+    /// Solarflare Light (https://tinted-theming.github.io/tinted-gallery/#base16-solarflare-light)
     SolarflareLight,
+    /// Solarflare (https://tinted-theming.github.io/tinted-gallery/#base16-solarflare)
     Solarflare,
+    /// Solarized Dark (https://tinted-theming.github.io/tinted-gallery/#base16-solarized-dark)
     SolarizedDark,
+    /// Solarized Light (https://tinted-theming.github.io/tinted-gallery/#base16-solarized-light)
     SolarizedLight,
+    /// Spaceduck (https://tinted-theming.github.io/tinted-gallery/#base16-spaceduck)
     Spaceduck,
+    /// Spacemacs (https://tinted-theming.github.io/tinted-gallery/#base16-spacemacs)
     Spacemacs,
+    /// Sparky (https://tinted-theming.github.io/tinted-gallery/#base16-sparky)
     Sparky,
+    /// Standardized Dark (https://tinted-theming.github.io/tinted-gallery/#base16-standardized-dark)
     StandardizedDark,
+    /// Standardized Light (https://tinted-theming.github.io/tinted-gallery/#base16-standardized-light)
     StandardizedLight,
+    /// Stella (https://tinted-theming.github.io/tinted-gallery/#base16-stella)
     Stella,
+    /// Still Alive (https://tinted-theming.github.io/tinted-gallery/#base16-still-alive)
     StillAlive,
+    /// Summercamp (https://tinted-theming.github.io/tinted-gallery/#base16-summercamp)
     Summercamp,
+    /// Summerfruit Dark (https://tinted-theming.github.io/tinted-gallery/#base16-summerfruit-dark)
     SummerfruitDark,
+    /// Summerfruit Light (https://tinted-theming.github.io/tinted-gallery/#base16-summerfruit-light)
     SummerfruitLight,
+    /// Synth Midnight Dark (https://tinted-theming.github.io/tinted-gallery/#base16-synth-midnight-dark)
     SynthMidnightDark,
+    /// Synth Midnight Light (https://tinted-theming.github.io/tinted-gallery/#base16-synth-midnight-light)
     SynthMidnightLight,
+    /// Tango (https://tinted-theming.github.io/tinted-gallery/#base16-tango)
     Tango,
+    /// Tarot (https://tinted-theming.github.io/tinted-gallery/#base16-tarot)
     Tarot,
+    /// Tender (https://tinted-theming.github.io/tinted-gallery/#base16-tender)
     Tender,
+    /// Terracotta Dark (https://tinted-theming.github.io/tinted-gallery/#base16-terracotta-dark)
     TerracottaDark,
+    /// Terracotta (https://tinted-theming.github.io/tinted-gallery/#base16-terracotta)
     Terracotta,
+    /// Tokyo City Dark (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-city-dark)
     TokyoCityDark,
+    /// Tokyo City Light (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-city-light)
     TokyoCityLight,
+    /// Tokyo City Terminal Dark (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-city-terminal-dark)
     TokyoCityTerminalDark,
+    /// Tokyo City Terminal Light (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-city-terminal-light)
     TokyoCityTerminalLight,
+    /// Tokyo Night Dark (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-night-dark)
     TokyoNightDark,
+    /// Tokyo Night Light (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-night-light)
     TokyoNightLight,
+    /// Tokyo Night Moon (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-night-moon)
     TokyoNightMoon,
+    /// Tokyo Night Storm (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-night-storm)
     TokyoNightStorm,
+    /// Tokyo Night Terminal Dark (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-night-terminal-dark)
     TokyoNightTerminalDark,
+    /// Tokyo Night Terminal Light (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-night-terminal-light)
     TokyoNightTerminalLight,
+    /// Tokyo Night Terminal Storm (https://tinted-theming.github.io/tinted-gallery/#base16-tokyo-night-terminal-storm)
     TokyoNightTerminalStorm,
+    /// Tokyodark Terminal (https://tinted-theming.github.io/tinted-gallery/#base16-tokyodark-terminal)
     TokyodarkTerminal,
+    /// Tokyodark (https://tinted-theming.github.io/tinted-gallery/#base16-tokyodark)
     Tokyodark,
+    /// Tomorrow Night Eighties (https://tinted-theming.github.io/tinted-gallery/#base16-tomorrow-night-eighties)
     TomorrowNightEighties,
+    /// Tomorrow Night (https://tinted-theming.github.io/tinted-gallery/#base16-tomorrow-night)
     TomorrowNight,
+    /// Tomorrow (https://tinted-theming.github.io/tinted-gallery/#base16-tomorrow)
     Tomorrow,
+    /// Tube (https://tinted-theming.github.io/tinted-gallery/#base16-tube)
     Tube,
+    /// Twilight (https://tinted-theming.github.io/tinted-gallery/#base16-twilight)
     Twilight,
+    /// Unikitty Dark (https://tinted-theming.github.io/tinted-gallery/#base16-unikitty-dark)
     UnikittyDark,
+    /// Unikitty Light (https://tinted-theming.github.io/tinted-gallery/#base16-unikitty-light)
     UnikittyLight,
+    /// Unikitty Reversible (https://tinted-theming.github.io/tinted-gallery/#base16-unikitty-reversible)
     UnikittyReversible,
+    /// Uwunicorn (https://tinted-theming.github.io/tinted-gallery/#base16-uwunicorn)
     Uwunicorn,
+    /// Vesper (https://tinted-theming.github.io/tinted-gallery/#base16-vesper)
     Vesper,
+    /// Vice (https://tinted-theming.github.io/tinted-gallery/#base16-vice)
     Vice,
+    /// Vulcan (https://tinted-theming.github.io/tinted-gallery/#base16-vulcan)
     Vulcan,
+    /// Windows 10 Light (https://tinted-theming.github.io/tinted-gallery/#base16-windows-10-light)
     Windows10Light,
+    /// Windows 10 (https://tinted-theming.github.io/tinted-gallery/#base16-windows-10)
     Windows10,
+    /// Windows 95 Light (https://tinted-theming.github.io/tinted-gallery/#base16-windows-95-light)
     Windows95Light,
+    /// Windows 95 (https://tinted-theming.github.io/tinted-gallery/#base16-windows-95)
     Windows95,
+    /// Windows Highcontrast Light (https://tinted-theming.github.io/tinted-gallery/#base16-windows-highcontrast-light)
     WindowsHighcontrastLight,
+    /// Windows Highcontrast (https://tinted-theming.github.io/tinted-gallery/#base16-windows-highcontrast)
     WindowsHighcontrast,
+    /// Windows Nt Light (https://tinted-theming.github.io/tinted-gallery/#base16-windows-nt-light)
     WindowsNtLight,
+    /// Windows Nt (https://tinted-theming.github.io/tinted-gallery/#base16-windows-nt)
     WindowsNt,
+    /// Woodland (https://tinted-theming.github.io/tinted-gallery/#base16-woodland)
     Woodland,
+    /// Xcode Dusk (https://tinted-theming.github.io/tinted-gallery/#base16-xcode-dusk)
     XcodeDusk,
+    /// Zenbones (https://tinted-theming.github.io/tinted-gallery/#base16-zenbones)
     Zenbones,
+    /// Zenburn (https://tinted-theming.github.io/tinted-gallery/#base16-zenburn)
     Zenburn,
 }
 
